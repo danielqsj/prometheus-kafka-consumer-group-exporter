@@ -27,7 +27,7 @@ type ConsumerGroupsCommandClient struct {
 }
 
 func (col *ConsumerGroupsCommandClient) execConsumerGroupCommand(ctx context.Context, args ...string) (string, error) {
-	allArgs := append([]string{"--new-consumer", "--bootstrap-server", col.BootstrapServers}, args...)
+	allArgs := append([]string{"--new-consumer", "--bootstrap-server", col.BootstrapServers}, args..., "2>/dev/null")
 	cmd := exec.Command(col.ConsumerGroupCommandPath, allArgs...)
 
 	var b bytes.Buffer
