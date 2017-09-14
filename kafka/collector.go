@@ -31,8 +31,9 @@ func (col *ConsumerGroupsCommandClient) execConsumerGroupCommand(ctx context.Con
 	cmd := exec.Command(col.ConsumerGroupCommandPath, allArgs...)
 
 	var b bytes.Buffer
+	var b1 bytes.Buffer
 	cmd.Stdout = &b
-	// cmd.Stderr = &b
+	cmd.Stderr = &b1
 	if err := cmd.Start(); err != nil {
 		return "", err
 	}
@@ -90,7 +91,7 @@ func parseLong(value string) (int64, error) {
 func parsePartitionInfo(line string) (*exporter.PartitionInfo, error) {
 	fields := consumerGroupCommandDescribeOutputSeparatorRegexp.Split(line, -1)
 	if len(fields) != 8 {
-		return nil, fmt.Errorf("malformed line: %s", line)
+		return nil, fmt.Errorf("malformed line: %s, field number: %v", line, len(fields))
 	}
 
 	var err error
@@ -124,7 +125,7 @@ func parsePartitionOutput(output string) ([]*exporter.PartitionInfo, error) {
 		return nil, fmt.Errorf("Got runtime error when executing script. Output: %s", output)
 	}
 
-	lines := strings.Split(output, "\n")[1:] /* discard header line */
+	lines := strings.Split(output, "\n")[2:] /* discard header lines */
 	partitionInfos := make([]*exporter.PartitionInfo, 0, len(lines))
 	for _, line := range lines {
 		if line == "" {
