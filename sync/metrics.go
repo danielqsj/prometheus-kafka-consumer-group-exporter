@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	exporter "github.com/kawamuray/prometheus-kafka-consumer-group-exporter"
+	exporter "github.com/danielqsj/prometheus-kafka-consumer-group-exporter"
 )
 
 // FanInConsumerGroupInfoClient is a exporter.ConsumerGroupInfoClient decorator that

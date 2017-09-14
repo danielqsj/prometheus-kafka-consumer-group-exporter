@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	log "github.com/Sirupsen/logrus"
-	exporter "github.com/kawamuray/prometheus-kafka-consumer-group-exporter"
+	exporter "github.com/danielqsj/prometheus-kafka-consumer-group-exporter"
 )
 
 // Fields separator is different between kafka versions

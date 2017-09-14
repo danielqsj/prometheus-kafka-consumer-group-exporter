@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kawamuray/prometheus-kafka-consumer-group-exporter/mocks"
+	"github.com/danielqsj/prometheus-kafka-consumer-group-exporter/mocks"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

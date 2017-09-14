@@ -3,7 +3,7 @@ package mocks
 import (
 	"context"
 
-	exporter "github.com/kawamuray/prometheus-kafka-consumer-group-exporter"
+	exporter "github.com/danielqsj/prometheus-kafka-consumer-group-exporter"
 )
 
 var mockGroupName = "default"

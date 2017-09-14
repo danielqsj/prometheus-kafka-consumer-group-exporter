@@ -6,7 +6,7 @@ import (
 	. "testing"
 	"time"
 
-	exporter "github.com/kawamuray/prometheus-kafka-consumer-group-exporter"
+	exporter "github.com/danielqsj/prometheus-kafka-consumer-group-exporter"
 )
 
 func TestParsePartitionTableForKafkaVersion0_10_0_1(t *T) {

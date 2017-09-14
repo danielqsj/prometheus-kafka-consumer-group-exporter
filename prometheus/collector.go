@@ -6,7 +6,7 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	exporter "github.com/kawamuray/prometheus-kafka-consumer-group-exporter"
+	exporter "github.com/danielqsj/prometheus-kafka-consumer-group-exporter"
 	"github.com/prometheus/client_golang/prometheus"
 	dto "github.com/prometheus/client_model/go"
 )

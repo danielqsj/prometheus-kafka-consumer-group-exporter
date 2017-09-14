@@ -5,8 +5,8 @@ import (
 	"sync"
 	"testing"
 
-	exporter "github.com/kawamuray/prometheus-kafka-consumer-group-exporter"
-	"github.com/kawamuray/prometheus-kafka-consumer-group-exporter/mocks"
+	exporter "github.com/danielqsj/prometheus-kafka-consumer-group-exporter"
+	"github.com/danielqsj/prometheus-kafka-consumer-group-exporter/mocks"
 )
 
 func TestFanOutGroupsListing(t *testing.T) {

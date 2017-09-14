@@ -8,9 +8,9 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 
-	"github.com/kawamuray/prometheus-kafka-consumer-group-exporter/kafka"
-	kafkaprom "github.com/kawamuray/prometheus-kafka-consumer-group-exporter/prometheus"
-	"github.com/kawamuray/prometheus-kafka-consumer-group-exporter/sync"
+	"github.com/danielqsj/prometheus-kafka-consumer-group-exporter/kafka"
+	kafkaprom "github.com/danielqsj/prometheus-kafka-consumer-group-exporter/prometheus"
+	"github.com/danielqsj/prometheus-kafka-consumer-group-exporter/sync"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/urfave/cli"
